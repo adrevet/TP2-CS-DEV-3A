@@ -18,7 +18,7 @@ Que reste-t-il à faire :
 from ma_lib import inconnu, proposition, points
 
 #Programme principal
-lettres_mots = "abcdefghijklmnopqrstuvwxyz"
+lettres-mots = "abcdefghijklmnopqrstuvwxyz"
 
 
 dessins = [
