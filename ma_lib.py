@@ -38,7 +38,7 @@ nberreurs = len(dessins)-1
 def points():
     
     erreurs = 0
-    mot = mots[randrange(len(mots))]
+    mot = fich[randrange(len(fich))]
     propositions = []
 
     print(dessins[erreurs])
@@ -52,13 +52,13 @@ def points():
         if lettre in mot:
             if inconnu(mot, propositions) == mot:
                 print("Bravo, tu as trouvé le mot :", mot)
-                print("Tu t'es trompé ", erreurs," fois")
+                print("Tu t'es trompé(e) ", erreurs," fois")
                 return True
         else:
             erreurs = erreurs + 1
             print(dessins[erreurs])
         if erreurs >= nberreurs:
-                print("Tu es pendu, le mot à trouver était :", mot,"\nC'est trivial !!!!!!!")
+                print("Tu es pendu, le mot à trouver était :", mot)
                 return False
             
 
