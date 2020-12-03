@@ -8,6 +8,7 @@ Created on Thu Dec  3 08:22:39 2020
 
 from random import randrange
 fich = open('mots.txt','r')
+lettres-mots = "abcdefghijklmnopqrstuvwxyz"
 
 def inconnu(fich, propositions):
     x = ""
@@ -60,7 +61,6 @@ def points():
         if erreurs >= nberreurs:
                 print("Tu es pendu, le mot à trouver était :", mot)
                 return False
-            
 
 parties = 0
 victoires = 0
