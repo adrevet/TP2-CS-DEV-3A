@@ -6,13 +6,123 @@ Created on Thu Dec  3 08:22:39 2020
 @author: alex
 """
 
-from random import randrange
-fich = open('mots.txt','r')
-lettres-mots = "abcdefghijklmnopqrstuvwxyz"
+from random import choice
 
-def inconnu(fich, propositions):
+lettres_mots = "abcdefghijklmnopqrstuvwxyz"
+dessins = [
+"""
+
+
+
+
+
+
+
+
+_|____
+""",
+"""
+ |
+ |
+ |
+ |
+ |
+ |
+ |
+_|____
+""",
+"""
+_______
+ |   |
+ |
+ |
+ |
+ |
+ |
+ |
+_|____
+""",
+"""
+_______
+ |   |
+ |   O
+ |
+ |
+ |
+ |
+ |
+_|____
+""",
+"""
+_______
+ |   |
+ |   O
+ |   |
+ |
+ |
+ |
+ |
+_|____
+""",
+"""
+_______
+ |   |
+ |   O
+ |  /|\
+ |
+ |
+ |
+ |
+_|_____
+""",
+"""'
+_______
+ |   |
+ |   O
+ |  /|\
+ |
+ |
+ |
+ |
+_|_____
+""",
+"""
+_______
+ |   |
+ |   O
+ |  /|\
+ |  /
+ |
+ |
+ |
+_|_____
+""",
+"""
+_______
+ |   |
+ |   O
+ |  /|\      GAME OVER
+ |  / \
+ |
+ |
+ |
+_|_____
+"""
+]
+
+def mots():
+    fich = open('mots.txt','r')
+    m = fich.readlines()
+    for i in range(len(m)-1) :
+        m[i] = m[i][:-1]
+    word = choice(m)
+    fich.close()
+    return word
+    
+
+def inconnu(mots, propositions):
     x = ""
-    for i in fich:
+    for i in mots:
         if i in propositions:
             x = x + i
         else:
@@ -36,10 +146,10 @@ def proposition(propositions):
 
 nberreurs = len(dessins)-1
 
-def points():
+def partie():
     
     erreurs = 0
-    mot = fich[randrange(len(fich))]
+    mot = mots() 
     propositions = []
 
     print(dessins[erreurs])
@@ -61,24 +171,4 @@ def points():
         if erreurs >= nberreurs:
                 print("Tu es pendu, le mot à trouver était :", mot)
                 return False
-
-parties = 0
-victoires = 0
-
-
-while True:
-    parties = parties + 1
-    if points():
-        victoires = victoires + 1
-        
-    while True:
-        continuer = input("1 pour continuer, 0 pour arrêter : ")
-        a=1
-        if continuer == '1':
-            a = a+1
-        elif continuer == '0':
-            a = a-1
-        break;
-
-    if a == 0:
-        break;
+    return
