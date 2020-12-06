@@ -10,7 +10,7 @@ Created on Thu Dec  3 08:20:51 2020
 """
 Que fait ce programme : Jeu du pendu
 Qui l'a fait : Alexandre Drevet
-Quand a-t--il été réalisé : 03/12/2020
+Quand a-t-il été réalisé : 03/12/2020
 Que reste-t-il à faire : x
 """
 
@@ -21,8 +21,9 @@ from ma_lib import partie
 parties = 0
 victoires = 0
 
-#Cette boucle permet de comptabiliser les différentes parties que fait le joueur
-#ainsi que son nombre de victoires et lui demande s'il veut continuer ou non
+#Cette boucle permet de comptabiliser les différentes parties que fait 
+#le joueur ainsi que son nombre de victoires et lui demande s'il souhaite 
+#continuer ou non
 while True:
     parties = parties + 1
     if partie():
@@ -40,6 +41,6 @@ while True:
     if a == 0:
         break;
 
-#Affiche le message de fin
+#Affiche le message de fin lorsque l'utilisateur décide d'arrêter
 print("Tu as joué", parties, "partie(s)")
 print("Tu en as gagné", victoires)

@@ -68,7 +68,7 @@ _|____
 _______
  |   |
  |   O
- |  /|\
+ |  /|/
  |
  |
  |
@@ -90,7 +90,7 @@ _|_____
 _______
  |   |
  |   O
- |  /|\
+ |  /|/
  |  /
  |
  |
@@ -101,8 +101,8 @@ _|_____
 _______
  |   |
  |   O
- |  /|\      GAME OVER
- |  / \
+ |  /|/    GAME OVER
+ |  / /
  |
  |
  |
@@ -110,25 +110,30 @@ _|_____
 """
 ]
 
+#Cette fonction permet d'ouvrir le fichier texte où les mots sont contenus
+#et d'en choisir un au hasard parmis tous
 def mots():
     fich = open('mots.txt','r')
     m = fich.readlines()
     for i in range(len(m)-1) :
-        m[i] = m[i][:-1]
+        m[i] = m[i][:-1] #on enlève le \n à tous les mots
     word = choice(m)
     fich.close()
     return word
     
-
+#Cette fonction permet de remplacer les lettres à chercher par des _ et les
+#remplacer lorsque le joueur en a trouvé une
 def inconnu(mots, propositions):
     x = ""
     for i in mots:
         if i in propositions:
             x = x + i
         else:
-            x = x + "_"
+            x = x + "_ "
     return x
 
+#Cette fonction permet de demander à l'utilisateur une lettre et elle sert de 
+#sécurité lorsque le joueur ne met pas un caractère approprié
 def proposition(propositions):
  
     while True:
@@ -144,8 +149,10 @@ def proposition(propositions):
     propositions.append(lettre)
     return lettre
 
+#On compte le nombre d'erreurs en fonction du nombre de dessins
 nberreurs = len(dessins)-1
 
+#Cette fonction permet de comptabiliser les erreurs commises par le joueur
 def partie():
     
     erreurs = 0
@@ -153,7 +160,9 @@ def partie():
     propositions = []
 
     print(dessins[erreurs])
-
+#Cette boucle permet d'afficher les différentes lettres utilisées par le
+#joueur, afficher le mot à trouver et de dire au joueur s'il a gagné cette
+#partie ou non
     while True:
         print("Lettres utilisées :", propositions)
         print("Le mot est :", inconnu(mot, propositions))
