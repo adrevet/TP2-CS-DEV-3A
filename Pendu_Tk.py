@@ -15,13 +15,14 @@ Que reste-t-il à faire :
 """
 
 #Importation des bibliothèques nécessaires
-from tkinter import Tk, Label, Button, Canvas
+from tkinter import Tk, Label, Button, Canvas, StringVar, Entry
 #from ma_lib_tk import proposition
 
 #Programme principal
 Mafenetre = Tk()
 Mafenetre.title('Jeu du pendu')
-labelWelcome = Label(Mafenetre, text = 'Bienvenue sur le jeu du pendu', fg = 'black')
+labelWelcome = Label(Mafenetre, text = 'Bienvenue sur le jeu du pendu', 
+                     fg = 'black')
 labelWelcome.pack()
 Largeur = 300
 Longueur = 300
@@ -31,7 +32,13 @@ Canevas.pack(padx = 5, pady = 5)
 #item = Canevas.create_image(80,80, image = photo)
 BoutonLettre = Button(Mafenetre, text = 'Entrez une lettre')
 BoutonLettre.pack(side = 'top', padx = 5, pady = 5)
-buttonQuitter = Button(Mafenetre, text = 'Quitter le pendu', fg = 'black', command = Mafenetre.destroy)
+Lettre = StringVar()
+Champ = Entry(Mafenetre, textvariable = Lettre, bg = 'white', fg = 'black')
+Champ.focus_set()
+Champ.pack(side = 'left', padx = 5, pady = 5)
+buttonQuitter = Button(Mafenetre, text = 'Quitter le pendu', fg = 'black', 
+                       command = Mafenetre.destroy)
+
 buttonQuitter.pack()
 Mafenetre.mainloop()
 
