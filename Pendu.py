@@ -8,7 +8,7 @@ Created on Thu Dec  3 08:20:51 2020
 
 # Header
 """
-Que fait ce programme : Jeu du pendu
+Que fait ce programme : Jeu du pendu version console
 Qui l'a fait : Alexandre Drevet
 Quand a-t-il été réalisé : 03/12/2020
 Que reste-t-il à faire : x
