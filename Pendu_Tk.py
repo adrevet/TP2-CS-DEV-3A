@@ -11,7 +11,10 @@ Created on Wed Dec  9 17:21:05 2020
 Que fait ce programme : Jeu du pendu version graphique
 Qui l'a fait : Alexandre Drevet
 Quand a-t-il été réalisé : 10/12/2020
-Que reste-t-il à faire : 
+Que reste-t-il à faire : Il faut afficher le mot à trouver sous forme de tiret,
+il faut créer une fonction qui affiche les images suivant le nombre d'erreurs
+faites par le joueur, il faut faire une fonction affichant un message quand le 
+joueur a finit de jouer car il a gagné ou perdu.
 """
 
 #Importation des bibliothèques nécessaires
