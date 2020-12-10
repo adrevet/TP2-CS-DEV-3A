@@ -35,8 +35,8 @@ def inconnu(mots, Lettre):
     return x
 
 
-#Cette fonction permet de demander à l'utilisateur une lettre et elle sert de 
-#sécurité lorsque le joueur ne met pas un caractère approprié
+#Cette fonction sert de sécurité lorsque pour que le joueur ne mette pas de 
+#caractères inappropirés
 def proposition(Lettre, Champ):
     Lettres = Lettre.get()
     Champ.delete(0, 'end')
@@ -52,8 +52,11 @@ def proposition(Lettre, Champ):
 #    erreurs = 0
 #    mot = mots()
 #    propositions = []
-    
-    
+
+#Cette fonction permet au joueur de rejouer 
+def rejouer (Mafenetre):
+    Mafenetre.destroy()
+    rejouer(Mafenetre)
     
     
     
