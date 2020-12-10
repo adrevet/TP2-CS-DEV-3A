@@ -11,11 +11,12 @@ Created on Wed Dec  9 17:21:05 2020
 Que fait ce programme : Jeu du pendu version graphique
 Qui l'a fait : Alexandre Drevet
 Quand a-t-il été réalisé : 10/12/2020
-Que reste-t-il à faire : Il faut créer une fonction qui affiche les images
-suivant le nombre d'erreurs faites par le joueur, il faut faire une fonction 
-qui récupère les lettres déjà utilisées (global ?), il faut faire une fonction 
-affichant un message quand le joueur a finit de jouer car il a gagné ou perdu, 
-il faut améliorer la fonction rejouer pour pouvoir raffraichir la page.
+Que reste-t-il à faire : Il faut remplacer les tirets par la lettre trouvée par
+l'utilisateur, il faut créer une fonction qui affiche les images suivant le 
+nombre d'erreurs faites par le joueur, il faut faire une fonction qui récupère 
+les lettres déjà utilisées (global ?), il faut faire une fonction affichant un 
+message quand le joueur a finit de jouer car il a gagné ou perdu, il faut 
+améliorer la fonction rejouer pour pouvoir raffraichir la page.
 """
 
 #Importation des bibliothèques nécessaires

@@ -53,6 +53,10 @@ def proposition(Lettre, Champ):
 #    mot = mots()
 #    propositions = []
 
+#Cette fonction affiche les images du pendu en fonction des erreurs faites par 
+#l'utilisateur        
+#def afficheimg():
+
 #Cette fonction permet au joueur de rejouer 
 def rejouer (Mafenetre):
     Mafenetre.destroy()
