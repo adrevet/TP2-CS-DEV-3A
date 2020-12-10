@@ -12,6 +12,7 @@ Que fait ce programme : Jeu du pendu version console
 Qui l'a fait : Alexandre Drevet
 Quand a-t-il été réalisé : 03/12/2020
 Que reste-t-il à faire : x
+Lien github : https://github.com/adrevet/TP2-CS-DEV-3A.git
 """
 
 #Importation des bibliothèques nécessaires

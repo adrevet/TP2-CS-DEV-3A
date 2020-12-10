@@ -17,6 +17,7 @@ nombre d'erreurs faites par le joueur, il faut faire une fonction qui récupère
 les lettres déjà utilisées (global ?), il faut faire une fonction affichant un 
 message quand le joueur a finit de jouer car il a gagné ou perdu, il faut 
 améliorer la fonction rejouer pour pouvoir raffraichir la page.
+Lien github : https://github.com/adrevet/TP2-CS-DEV-3A.git
 """
 
 #Importation des bibliothèques nécessaires
